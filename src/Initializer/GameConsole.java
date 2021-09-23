@@ -48,7 +48,7 @@ public class GameConsole
 			System.out.printf("Enter end location for snake(Integer value lesser than %d )",start);
 			System.out.println();
 			int end = sc.nextInt();
-			while(start<end || start<startb || start>startb || end<endb || end>endb)
+			while(start<end || start<startb ||  end>endb)
 			{
 				System.out.printf("Enter start location for snake(Integer value greater than %d and lesser than %d):",startb,endb);
 				System.out.println();
@@ -78,7 +78,7 @@ public class GameConsole
 			System.out.printf("Enter end location for Ladder(Integer value greater than %d and lesser than %d)",start,endb);
 			System.out.println();
 			int end = sc.nextInt();
-			while(start>end || start<startb || start>startb || end<endb || end>endb || snakemapforValid.containsKey(start))
+			while(start>end || start<startb || end>endb || snakemapforValid.containsKey(start))
 			{
 				System.out.printf("Enter start location for snake(Integer value greater than %d and lesser than %d):",startb,endb);
 				System.out.println();
