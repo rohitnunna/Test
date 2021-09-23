@@ -24,7 +24,7 @@ public class GameConsole
 		int startb = sc.nextInt();
 		System.out.println("Enter the end location of the Board");
 		int endb = sc.nextInt();
-		while(startb<endb || startb<0 || endb <0)
+		while(startb>endb || startb<0 || endb <0)
 		{
 			System.out.println("Enter the start location of the Board");
 			startb = sc.nextInt();
