@@ -24,8 +24,20 @@ public class GameConsole
 		int startb = sc.nextInt();
 		System.out.println("Enter the end location of the Board");
 		int endb = sc.nextInt();
+		while(startb<endb || startb<0 || endb <0)
+		{
+			System.out.println("Enter the start location of the Board");
+			startb = sc.nextInt();
+			System.out.println("Enter the end location of the Board");
+			endb = sc.nextInt();
+		}
 		System.out.println("Enter the number of Snakes in the Board");
 		int noOfSnakes = sc.nextInt();
+		while(noOfSnakes <=0)
+		{
+			System.out.println("Enter the number of Snakes in the Board");
+			noOfSnakes = sc.nextInt();
+		}
 		ArrayList<Snake> snakes = new ArrayList<Snake>(noOfSnakes);
 		HashMap<Integer,Boolean> snakemapforValid = new HashMap<Integer,Boolean>();
 		while(noOfSnakes>0)
@@ -53,6 +65,11 @@ public class GameConsole
 		System.out.println("Enter the number of Ladders int the Board");
 		int noOfLadders = sc.nextInt();
 		ArrayList<Ladder> ladders = new ArrayList<Ladder>(noOfLadders);
+		while(noOfLadders<=0)
+		{
+			System.out.println("Enter the number of Ladders int the Board");
+			noOfLadders = sc.nextInt();
+		}
 		while(noOfLadders>0)
 		{
 			System.out.printf("Enter start location for Ladder(Integer value greater than %d):",startb);
